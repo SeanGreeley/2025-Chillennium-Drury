@@ -1,11 +1,6 @@
 extends Node
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+var emails = [
+	{"name"="Winston Digs", "header"="Blueprints Needed", "subject"="Bathroom", "links"=null},
+	{"name"="Katherine McGill", "header"="Sick Today", "subject"="Sickness", "links"=null},
+	{"name"="Richie Rich", "header"="WHO DOESN'T LOVE MONEY?", "subject"="Scammer get Scammed", "links"=null}
+]
