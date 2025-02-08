@@ -1,10 +1,20 @@
-[gd_scene format=3 uid="uid://dy5klxpc0wlkx"]
+[gd_scene load_steps=2 format=3 uid="uid://dy5klxpc0wlkx"]
+
+[ext_resource type="Script" path="res://scripts/EmailController.gd" id="1_3swdg"]
 
 [node name="GameMain" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_3swdg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 649.0
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 120.0
+offset_right = 464.0
+offset_bottom = 634.0
