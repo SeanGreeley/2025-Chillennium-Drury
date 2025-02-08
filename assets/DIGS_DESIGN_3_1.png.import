@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpkfoir6wewh5"
-path="res://.godot/imported/DIGS_DESIGN_3_1.webp-764acca880ec1eed7844a3d97e990652.ctex"
+uid="uid://cxibixcgmn5kd"
+path="res://.godot/imported/DIGS_DESIGN_3_1.png-aa67a4d91f9cb3f7c32b46b3c8d22d32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/DIGS_DESIGN_3_1.webp"
-dest_files=["res://.godot/imported/DIGS_DESIGN_3_1.webp-764acca880ec1eed7844a3d97e990652.ctex"]
+source_file="res://assets/DIGS_DESIGN_3_1.png"
+dest_files=["res://.godot/imported/DIGS_DESIGN_3_1.png-aa67a4d91f9cb3f7c32b46b3c8d22d32.ctex"]
 
 [params]
 
