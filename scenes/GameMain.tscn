@@ -40,13 +40,13 @@ color = Color(0.605274, 0.605274, 0.605274, 1)
 layout_mode = 0
 offset_left = 489.0
 offset_top = 134.0
-offset_right = 907.0
+offset_right = 888.0
 offset_bottom = 510.0
 tooltip_text = "Email View Box: After clicking on an email to the left, the email will show up here."
 
 [node name="From" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "From: "
+text = "From"
 
 [node name="To You" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -54,14 +54,19 @@ text = "To: You"
 
 [node name="Subject" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Subject:"
+text = "Subject"
 
-[node name="Text" type="Label" parent="VBoxContainer"]
+[node name="Text" type="RichTextLabel" parent="VBoxContainer"]
 layout_mode = 2
 text = "Text"
+fit_content = true
+scroll_active = false
 
-[node name="Links" type="Label" parent="VBoxContainer"]
+[node name="Links" type="RichTextLabel" parent="VBoxContainer"]
 layout_mode = 2
+text = "Text"
+fit_content = true
+scroll_active = false
 
 [node name="BottomBar" type="ColorRect" parent="."]
 layout_mode = 0
