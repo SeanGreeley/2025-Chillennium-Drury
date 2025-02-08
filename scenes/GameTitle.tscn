@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cspmxdwitqv8c"]
+[gd_scene load_steps=6 format=3 uid="uid://cspmxdwitqv8c"]
 
 [ext_resource type="Theme" uid="uid://0cvsh5dbnr77" path="res://Theme/MainTheme.tres" id="1_j4beu"]
 [ext_resource type="Script" path="res://scripts/MainMenuScripts/start_button.gd" id="2_fd0te"]
 [ext_resource type="Script" path="res://scripts/MainMenuScripts/quit_button.gd" id="3_73vjh"]
+[ext_resource type="Texture2D" uid="uid://cpxmajrl71xcx" path="res://assets/folder.png" id="4_1snma"]
 [ext_resource type="Script" path="res://scripts/MainMenuScripts/MainMenuButton.gd" id="4_3kcin"]
 
 [node name="GameOpening" type="Control"]
@@ -82,6 +83,14 @@ offset_right = 330.0
 offset_bottom = 23.0
 text = "X"
 horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 90.0
+offset_right = 219.0
+offset_bottom = 190.0
+texture = ExtResource("4_1snma")
 
 [node name="ItemList" type="ItemList" parent="."]
 layout_mode = 0
