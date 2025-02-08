@@ -1,12 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://cspmxdwitqv8c"]
 
-[sub_resource type="Theme" id="Theme_ye1jq"]
-Label/colors/font_color = Color(0, 0, 0, 1)
+[ext_resource type="Theme" uid="uid://0cvsh5dbnr77" path="res://Theme/MainTheme.tres" id="1_j4beu"]
 
 [node name="GameOpening" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-theme = SubResource("Theme_ye1jq")
+theme = ExtResource("1_j4beu")
 
 [node name="BackGround" type="ColorRect" parent="."]
 layout_mode = 0

@@ -1,4 +1,35 @@
-[gd_resource type="Theme" format=3 uid="uid://0cvsh5dbnr77"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://0cvsh5dbnr77"]
+
+[ext_resource type="Texture2D" uid="uid://dgl3gu2kh6fi" path="res://assets/button.jpg" id="1_otsgr"]
+[ext_resource type="Texture2D" uid="uid://3yqug2ps3760" path="res://assets/pressed button.jpg" id="2_4sykj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b4fkq"]
+texture = ExtResource("1_otsgr")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kyocu"]
+texture = ExtResource("1_otsgr")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x2gh1"]
+texture = ExtResource("2_4sykj")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p3e0l"]
+texture_margin_left = 10.0
 
 [resource]
+Button/styles/hover = SubResource("StyleBoxTexture_b4fkq")
+Button/styles/normal = SubResource("StyleBoxTexture_kyocu")
+Button/styles/pressed = SubResource("StyleBoxTexture_x2gh1")
 Label/colors/font_color = Color(0, 0, 0, 1)
+Label/styles/normal = SubResource("StyleBoxTexture_p3e0l")
