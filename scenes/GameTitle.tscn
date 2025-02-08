@@ -1,3 +1,36 @@
-[gd_scene format=3 uid="uid://cspmxdwitqv8c"]
+[gd_scene format=3 uid="uid://bpbvgdu7b3jrx"]
 
-[node name="GameOpening" type="Node2D"]
+[node name="GameOpening" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="BackGround" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1160.0
+offset_bottom = 670.0
+color = Color(0, 0.490196, 0.47451, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 250.0
+offset_right = 675.0
+offset_bottom = 273.0
+text = "Malicious E-Mails"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 300.0
+offset_right = 605.0
+offset_bottom = 331.0
+text = "Start"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 350.0
+offset_right = 605.0
+offset_bottom = 381.0
+text = "Quit"
