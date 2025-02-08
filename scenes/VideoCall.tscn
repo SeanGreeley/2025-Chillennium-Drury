@@ -43,7 +43,7 @@ text = "Nyoom Call - Stephen Careers"
 position = Vector2(576, 256)
 scale = Vector2(6.11458, 6.11458)
 sprite_frames = SubResource("SpriteFrames_1rrmg")
-frame_progress = 0.199357
+frame_progress = 0.224209
 
 [node name="Speech" type="Label" parent="."]
 layout_mode = 0
