@@ -7,11 +7,17 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_3swdg")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
+[node name="EmailBackground" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 649.0
+
+[node name="ItemListBackground" type="ColorRect" parent="."]
+offset_left = 18.0
+offset_top = 120.0
+offset_right = 464.0
+offset_bottom = 605.0
+color = Color(0.605274, 0.605274, 0.605274, 1)
 
 [node name="ItemList" type="ItemList" parent="."]
 layout_mode = 0
@@ -23,21 +29,49 @@ tooltip_text = "Email Inbox: When emails are sent to your account, they will app
 theme_override_font_sizes/font_size = 35
 allow_search = false
 
+[node name="VBoxBackground" type="ColorRect" parent="."]
+offset_left = 477.0
+offset_top = 120.0
+offset_right = 923.0
+offset_bottom = 605.0
+color = Color(0.605274, 0.605274, 0.605274, 1)
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 489.0
-offset_top = 122.0
-offset_right = 908.0
+offset_top = 134.0
+offset_right = 907.0
 offset_bottom = 510.0
 tooltip_text = "Email View Box: After clicking on an email to the left, the email will show up here."
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="From" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "From: "
+
+[node name="To You" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "To: You"
+
+[node name="Subject" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Subject:"
+
+[node name="Text" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Text"
+
+[node name="Links" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BottomBar" type="ColorRect" parent="."]
+layout_mode = 0
 offset_top = 620.0
 offset_right = 1151.0
 offset_bottom = 649.0
 color = Color(0.605274, 0.605274, 0.605274, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="TopBar" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 29.0
 color = Color(0.605274, 0.605274, 0.605274, 1)
