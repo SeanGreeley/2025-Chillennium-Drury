@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsqqb4tkiqan3"]
+
+[ext_resource type="Script" path="res://scripts/video_call.gd" id="1_reepk"]
+[ext_resource type="Texture2D" uid="uid://br0caxa5ave8" path="res://assets/stephenCareers/mouthClosed.png" id="2_umbbc"]
+[ext_resource type="Texture2D" uid="uid://5nvepjesebhk" path="res://assets/stephenCareers/mouthOpen.png" id="3_j7fco"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1rrmg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_umbbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j7fco")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="VideoCall" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_reepk")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 84.0
+offset_right = 776.0
+offset_bottom = 483.0
+
+[node name="WindowTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 85.0
+offset_right = 680.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Nyoom Call - Stephen Careers"
+
+[node name="Stephen" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 256)
+scale = Vector2(6.11458, 6.11458)
+sprite_frames = SubResource("SpriteFrames_1rrmg")
+frame_progress = 0.199357
+
+[node name="Speech" type="Label" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 405.0
+offset_right = 772.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "HEY BUB! YOU DID SOMETHING I DIDN'T LIKE! I AM ACTUALLY GOING TO KILL YOU! FIRING YOU WOULDN'T BE ENOUGH! RAAAAA!!"
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
