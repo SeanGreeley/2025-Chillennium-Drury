@@ -1,10 +1,11 @@
 extends Node
 #Email formats follow this format:
 # Key:{list of items}
-# subject:{fromName, text, links}
+# subject:{from, text, links}
 var emails = {
-	"Blueprints Needed":{"name":"Winston Digs", "text":"Bathroom", "links":null},
-	"Sick Today":{"name":"Katherine McGill", "text":"Sickness", "links":null},
-	"WHO DOESN'T LOVE MONEY?":{"name":"Richie Rich", "text":"Scammer get Scammed", "links":null}
+	"Welcome Newbie":{"from":"Stephen Careers", "text":"Hello World", "links":" "},
+	"Blueprints Needed":{"from":"Winston Digs", "text":"Bathroom", "links":" "},
+	"Sick Today":{"from":"Katherine McGill", "text":"Sickness", "links":" "},
+	"WHO DOESN'T LOVE MONEY?":{"from":"Richie Rich", "text":"Scammer get Scammed", "links":" "}
 }
 var emailSize = emails.size()
