@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://dy5klxpc0wlkx"]
 
-[node name="GameMain" type="Node2D"]
+[node name="GameMain" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 649.0
