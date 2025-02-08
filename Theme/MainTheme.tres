@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://0cvsh5dbnr77"]
 
-[ext_resource type="Texture2D" uid="uid://dgl3gu2kh6fi" path="res://assets/button.jpg" id="1_otsgr"]
+[ext_resource type="Texture2D" uid="uid://dgl3gu2kh6fi" path="res://assets/Button.jpg" id="1_otsgr"]
 [ext_resource type="Texture2D" uid="uid://3yqug2ps3760" path="res://assets/pressed button.jpg" id="2_4sykj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0w2b"]
