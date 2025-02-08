@@ -1,82 +1,145 @@
-[gd_scene load_steps=2 format=3 uid="uid://dy5klxpc0wlkx"]
+[gd_scene load_steps=5 format=3 uid="uid://dy5klxpc0wlkx"]
 
 [ext_resource type="Script" path="res://scripts/EmailController.gd" id="1_3swdg"]
+[ext_resource type="Script" path="res://scripts/ToMainMenu.gd" id="2_pnp5l"]
+[ext_resource type="Texture2D" uid="uid://3yqug2ps3760" path="res://assets/pressed button.jpg" id="3_qwcms"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rmlvw"]
+texture = ExtResource("3_qwcms")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
 
 [node name="GameMain" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_3swdg")
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="EmailBackground" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 649.0
+color = Color(0, 0.490196, 0.47451, 1)
 
-[node name="ItemListBackground" type="ColorRect" parent="."]
-offset_left = 18.0
-offset_top = 120.0
-offset_right = 464.0
-offset_bottom = 605.0
-color = Color(0.605274, 0.605274, 0.605274, 1)
+[node name="Panel2" type="Panel" parent="."]
+offset_top = 605.0
+offset_right = 1155.0
+offset_bottom = 650.0
 
-[node name="ItemList" type="ItemList" parent="."]
+[node name="StartButton" type="Button" parent="Panel2"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 65.0
+offset_bottom = 40.0
+text = "Start"
+
+[node name="Button" type="Button" parent="Panel2"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 120.0
-offset_right = 464.0
-offset_bottom = 603.0
+offset_left = 66.0
+offset_top = 5.0
+offset_right = 199.0
+offset_bottom = 40.0
+toggle_mode = true
+text = "Main Menu"
+script = ExtResource("2_pnp5l")
+
+[node name="Button2" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 5.0
+offset_right = 275.0
+offset_bottom = 40.0
+toggle_mode = true
+button_pressed = true
+text = "Email"
+
+[node name="Email" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 87.0
+offset_right = 985.0
+offset_bottom = 507.0
+script = ExtResource("1_3swdg")
+
+[node name="ItemList" type="ItemList" parent="Email"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 38.0
+offset_right = 258.0
+offset_bottom = 408.0
 tooltip_text = "Email Inbox: When emails are sent to your account, they will appear here."
 theme_override_font_sizes/font_size = 35
 allow_search = false
 
-[node name="VBoxBackground" type="ColorRect" parent="."]
-offset_left = 477.0
-offset_top = 120.0
-offset_right = 923.0
-offset_bottom = 605.0
-color = Color(0.605274, 0.605274, 0.605274, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxBackground" type="Panel" parent="Email"]
 layout_mode = 0
-offset_left = 489.0
-offset_top = 134.0
-offset_right = 888.0
-offset_bottom = 510.0
+offset_left = 269.0
+offset_top = 38.0
+offset_right = 787.0
+offset_bottom = 408.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_rmlvw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Email"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 52.0
+offset_right = 772.0
+offset_bottom = 383.0
 tooltip_text = "Email View Box: After clicking on an email to the left, the email will show up here."
 
-[node name="From" type="Label" parent="VBoxContainer"]
+[node name="From" type="Label" parent="Email/VBoxContainer"]
 layout_mode = 2
 text = "From"
 
-[node name="To You" type="Label" parent="VBoxContainer"]
+[node name="To You" type="Label" parent="Email/VBoxContainer"]
 layout_mode = 2
 text = "To: You"
 
-[node name="Subject" type="Label" parent="VBoxContainer"]
+[node name="Subject" type="Label" parent="Email/VBoxContainer"]
 layout_mode = 2
 text = "Subject"
 
-[node name="Text" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Text" type="RichTextLabel" parent="Email/VBoxContainer"]
 layout_mode = 2
 text = "Text"
 fit_content = true
 scroll_active = false
 
-[node name="Links" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Links" type="RichTextLabel" parent="Email/VBoxContainer"]
 layout_mode = 2
 text = "Text"
 fit_content = true
 scroll_active = false
 
-[node name="BottomBar" type="ColorRect" parent="."]
-layout_mode = 0
-offset_top = 620.0
-offset_right = 1151.0
-offset_bottom = 649.0
-color = Color(0.605274, 0.605274, 0.605274, 1)
+[node name="ColorRect" type="ColorRect" parent="Email"]
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 785.0
+offset_bottom = 32.0
+color = Color(0, 0, 0.478431, 1)
 
-[node name="TopBar" type="ColorRect" parent="."]
+[node name="Button3" type="Button" parent="Email/ColorRect"]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 29.0
-color = Color(0.605274, 0.605274, 0.605274, 1)
+offset_left = 755.0
+offset_top = -1.0
+offset_right = 779.0
+offset_bottom = 25.0
+script = ExtResource("2_pnp5l")
+
+[node name="Label3" type="Label" parent="Email/ColorRect"]
+layout_mode = 0
+offset_left = 755.0
+offset_right = 775.0
+offset_bottom = 23.0
+text = "X"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Email/ColorRect"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Email"
+horizontal_alignment = 1
