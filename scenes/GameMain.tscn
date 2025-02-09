@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dy5klxpc0wlkx"]
+[gd_scene load_steps=13 format=3 uid="uid://dy5klxpc0wlkx"]
 
 [ext_resource type="Script" path="res://scripts/EmailController.gd" id="1_3swdg"]
 [ext_resource type="Texture2D" uid="uid://dlneha07c4dfh" path="res://assets/Computer.png" id="1_kqsv2"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dx4sd3ld6t3ea" path="res://assets/listContainer.jpg" id="5_xfkyb"]
 [ext_resource type="Script" path="res://scripts/warning.gd" id="6_2wsqm"]
 [ext_resource type="AudioStream" uid="uid://klwbm4jvgtpu" path="res://assets/sfx/forwardMail.mp3" id="6_xc3kq"]
+[ext_resource type="AudioStream" uid="uid://10d7vsrnpxf0" path="res://assets/sfx/click.mp3" id="7_bamp3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rmlvw"]
 texture = ExtResource("3_qwcms")
@@ -176,6 +177,9 @@ script = ExtResource("4_6in1u")
 [node name="ButtonSound" type="AudioStreamPlayer2D" parent="Email/ForwardButton"]
 stream = ExtResource("6_xc3kq")
 
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="Email"]
+stream = ExtResource("7_bamp3")
+
 [node name="Panel3" type="Panel" parent="."]
 layout_mode = 0
 offset_top = 602.0
@@ -287,6 +291,9 @@ offset_right = 330.0
 offset_bottom = 23.0
 text = "X"
 horizontal_alignment = 1
+
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="Warning"]
+stream = ExtResource("7_bamp3")
 
 [connection signal="pressed" from="Email/ColorRect/Button3" to="Warning" method="_on_button_pressed"]
 [connection signal="pressed" from="Email/DeleteButton" to="Email" method="_on_delete_button_pressed"]
