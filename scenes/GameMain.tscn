@@ -25,41 +25,58 @@ color = Color(0, 0.490196, 0.47451, 1)
 
 [node name="Email" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 185.0
+offset_left = 98.0
 offset_top = 87.0
-offset_right = 985.0
-offset_bottom = 507.0
+offset_right = 1066.0
+offset_bottom = 554.0
 script = ExtResource("1_3swdg")
 
 [node name="ColorRect" type="ColorRect" parent="Email"]
+layout_mode = 0
 offset_left = 10.0
 offset_top = 8.0
-offset_right = 785.0
+offset_right = 955.0
 offset_bottom = 32.0
 color = Color(0, 0, 0.478431, 1)
 
 [node name="Button3" type="Button" parent="Email/ColorRect"]
 layout_mode = 0
-offset_left = 755.0
+offset_left = 926.0
 offset_top = -1.0
-offset_right = 779.0
+offset_right = 950.0
 offset_bottom = 25.0
 script = ExtResource("2_pnp5l")
 
 [node name="Label3" type="Label" parent="Email/ColorRect"]
 layout_mode = 0
-offset_left = 757.0
-offset_right = 777.0
+offset_left = 928.0
+offset_right = 948.0
 offset_bottom = 23.0
 text = "X"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Email/ColorRect"]
 layout_mode = 0
-offset_right = 100.0
+offset_left = 8.0
+offset_right = 161.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Email"
+text = "DIGS Inc. Email Service"
+horizontal_alignment = 1
+
+[node name="EmployeeList" type="ItemList" parent="Email"]
+offset_left = 770.0
+offset_top = 82.0
+offset_right = 950.0
+offset_bottom = 452.0
+allow_search = false
+
+[node name="Label2" type="Label" parent="Email"]
+offset_left = 791.0
+offset_top = 49.0
+offset_right = 930.0
+offset_bottom = 72.0
+text = "DIGS Employees:"
 horizontal_alignment = 1
 
 [node name="ItemList" type="ItemList" parent="Email"]
@@ -67,16 +84,15 @@ layout_mode = 0
 offset_left = 11.0
 offset_top = 38.0
 offset_right = 258.0
-offset_bottom = 408.0
-tooltip_text = "Email Inbox: When emails are sent to your account, they will appear here."
+offset_bottom = 452.0
 allow_search = false
 
 [node name="VBoxBackground" type="Panel" parent="Email"]
 layout_mode = 0
 offset_left = 269.0
 offset_top = 38.0
-offset_right = 787.0
-offset_bottom = 408.0
+offset_right = 759.0
+offset_bottom = 448.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rmlvw")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Email"]
@@ -85,15 +101,14 @@ offset_left = 281.0
 offset_top = 52.0
 offset_right = 772.0
 offset_bottom = 361.0
-tooltip_text = "Email View Box: After clicking on an email to the left, the email will show up here."
 
 [node name="From" type="Label" parent="Email/VBoxContainer"]
 layout_mode = 2
 text = "From"
 
-[node name="To You" type="Label" parent="Email/VBoxContainer"]
+[node name="Email" type="Label" parent="Email/VBoxContainer"]
 layout_mode = 2
-text = "To: You"
+text = "Email: "
 
 [node name="Subject" type="Label" parent="Email/VBoxContainer"]
 layout_mode = 2
@@ -112,25 +127,29 @@ fit_content = true
 scroll_active = false
 
 [node name="StartButton" type="Button" parent="Email"]
-offset_left = 275.0
-offset_top = 367.0
-offset_right = 528.0
-offset_bottom = 402.0
+layout_mode = 0
+offset_left = 278.0
+offset_top = 404.0
+offset_right = 517.0
+offset_bottom = 439.0
 text = "Delete"
 
 [node name="StartButton2" type="Button" parent="Email"]
-offset_left = 528.0
-offset_top = 367.0
-offset_right = 780.0
-offset_bottom = 402.0
-text = "Foward to boss name"
+layout_mode = 0
+offset_left = 518.0
+offset_top = 404.0
+offset_right = 751.0
+offset_bottom = 439.0
+text = "Foward to Stephan"
 
 [node name="Panel3" type="Panel" parent="."]
+layout_mode = 0
 offset_top = 602.0
 offset_right = 1155.0
 offset_bottom = 650.0
 
 [node name="StartButton" type="Button" parent="Panel3"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
 offset_right = 65.0

@@ -18,6 +18,7 @@ func _openMail(index, _vector2, _mouse_index):
 	var clickIndex = str($ItemList.get_item_text(index))
 	var clickedMail = mail[clickIndex]
 	$VBoxContainer/From.text = "From: %s" % clickedMail["from"]
+	$VBoxContainer/Email.text = "Email: %s" % clickedMail["email"]
 	$VBoxContainer/Subject.text = "Subject: %s" % clickIndex
 	$VBoxContainer/Text.text = clickedMail["text"]
 	$VBoxContainer/Links.text = clickedMail["links"]
