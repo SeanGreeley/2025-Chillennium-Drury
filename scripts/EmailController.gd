@@ -25,9 +25,28 @@ func _process(_delta: float) -> void:
 
 func _openMail(index, _vector2, _mouse_index):
 	var clickIndex = str($ItemList.get_item_text(index))
+	Global.currentSubject = clickIndex
 	var clickedMail = mail[clickIndex]
 	$VBoxContainer/From.text = "From: %s" % clickedMail["from"]
 	$VBoxContainer/Email.text = "Email: %s" % clickedMail["email"]
 	$VBoxContainer/Subject.text = "Subject: %s" % clickIndex
 	$VBoxContainer/Text.text = clickedMail["text"]
 	$VBoxContainer/Links.text = clickedMail["links"]
+
+func delete_by_subject(deleteSubject:String):
+	if deleteSubject != "Void":
+		for i in $ItemList.item_count:
+			if str($ItemList.get_item_text(i)) == deleteSubject:
+				$ItemList.remove_item(i)
+		Global.currentSubject = "Void"
+		$VBoxContainer/From.text = ""
+		$VBoxContainer/Email.text = ""
+		$VBoxContainer/Subject.text = ""
+		$VBoxContainer/Text.text = ""
+		$VBoxContainer/Links.text = ""
+
+func _on_delete_button_pressed():
+	delete_by_subject(Global.currentSubject)
+
+func _on_forward_button_pressed():
+	delete_by_subject(Global.currentSubject)

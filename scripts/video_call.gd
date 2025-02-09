@@ -4,10 +4,13 @@ var rawRatio = 0.0
 var speechText = ""
 
 func _ready():
+	visible = false
 	$Speech.visible_ratio = 0
 	rawRatio = 0
 	speechText = Global.emails[Global.currentSubject]["anger"]
 	$Speech.text = speechText
+	await get_tree().create_timer(3.0).timeout
+	visible = true
 	$Stephen.play("loading")
 	$CallSound.play()
 	await get_tree().create_timer(3.0).timeout
