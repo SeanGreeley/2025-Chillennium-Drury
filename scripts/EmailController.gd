@@ -34,15 +34,16 @@ func _openMail(index, _vector2, _mouse_index):
 	$VBoxContainer/Links.text = clickedMail["links"]
 
 func delete_by_subject(deleteSubject:String):
-	for i in $ItemList.item_count:
-		if str($ItemList.get_item_text(i)) == deleteSubject:
-			$ItemList.remove_item(i)
-	Global.currentSubject = "Void"
-	$VBoxContainer/From.text = ""
-	$VBoxContainer/Email.text = ""
-	$VBoxContainer/Subject.text = ""
-	$VBoxContainer/Text.text = ""
-	$VBoxContainer/Links.text = ""
+	if deleteSubject != "Void":
+		for i in $ItemList.item_count:
+			if str($ItemList.get_item_text(i)) == deleteSubject:
+				$ItemList.remove_item(i)
+		Global.currentSubject = "Void"
+		$VBoxContainer/From.text = ""
+		$VBoxContainer/Email.text = ""
+		$VBoxContainer/Subject.text = ""
+		$VBoxContainer/Text.text = ""
+		$VBoxContainer/Links.text = ""
 
 func _on_delete_button_pressed():
 	delete_by_subject(Global.currentSubject)
