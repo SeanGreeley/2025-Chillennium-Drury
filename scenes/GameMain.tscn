@@ -86,7 +86,7 @@ layout_mode = 0
 offset_left = 281.0
 offset_top = 52.0
 offset_right = 772.0
-offset_bottom = 383.0
+offset_bottom = 361.0
 tooltip_text = "Email View Box: After clicking on an email to the left, the email will show up here."
 
 [node name="From" type="Label" parent="Email/VBoxContainer"]
@@ -143,3 +143,17 @@ offset_bottom = 23.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Email"
 horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="Email"]
+offset_left = 275.0
+offset_top = 367.0
+offset_right = 528.0
+offset_bottom = 402.0
+text = "Delete"
+
+[node name="StartButton2" type="Button" parent="Email"]
+offset_left = 528.0
+offset_top = 367.0
+offset_right = 780.0
+offset_bottom = 402.0
+text = "Foward to boss name"
