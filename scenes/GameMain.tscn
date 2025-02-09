@@ -69,7 +69,6 @@ offset_top = 38.0
 offset_right = 258.0
 offset_bottom = 408.0
 tooltip_text = "Email Inbox: When emails are sent to your account, they will appear here."
-theme_override_font_sizes/font_size = 35
 allow_search = false
 
 [node name="VBoxBackground" type="Panel" parent="Email"]
