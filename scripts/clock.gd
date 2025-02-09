@@ -1,11 +1,10 @@
 extends Label
 
-var currTime = 9
+@export var currTime = 9
 var times = [10, 11, 12, 1, 2, 3, 4, 5]
 var noon = "AM"
 var timeloops = 0
 var pos = 0
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	text = "%d:%02d AM" % [(currTime), (timeloops)]

@@ -1,7 +1,8 @@
 extends Control
 var mail = Global.emails
 var mailSize = Global.emailSize - 1
-var random_key = mail.keys()[randi() % mailSize + 1]
+var gottenMail = []
+@export var thing: Label;
 var employees = {
 	"Bert":"res://assets/companyAvatars/bert.png",
 	"Katherine":"res://assets/companyAvatars/katherine.png", 
@@ -16,12 +17,7 @@ func _ready() -> void:
 		var currEmp = (employees.keys()[empNum])
 		$EmployeeList.add_item(currEmp, load(employees[currEmp]))
 	$ItemList.add_item(mail.keys()[0])
-	$ItemList.add_item(random_key)
-	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+	#$ItemList.add_item(random_key)
 
 func _openMail(index, _vector2, _mouse_index):
 	$ClickSound.play()
@@ -51,3 +47,16 @@ func _on_delete_button_pressed():
 
 func _on_forward_button_pressed():
 	delete_by_subject(Global.currentSubject)
+
+func _on_timer_timeout() -> void:
+	if (thing.currTime != 4 or thing.currTime != 5):
+		var random_key = (randi() % mailSize + 1)
+		var randEmail = randi() % 12
+		if (randEmail < 4):
+			while random_key in gottenMail:
+				if gottenMail.size() >= mailSize:
+					return
+				random_key = (randi() % mailSize + 1)
+			gottenMail.append(random_key)
+			$ItemList.add_item(mail.keys()[random_key])
+		
