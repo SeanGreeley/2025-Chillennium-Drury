@@ -17,3 +17,5 @@ func _process(delta):
 		$Speech.visible_ratio = floor(rawRatio*50)/50
 	elif $Speech.visible_ratio >= 1:
 		$TalkSound.stop()
+		await get_tree().create_timer(1.0).timeout
+		queue_free()
