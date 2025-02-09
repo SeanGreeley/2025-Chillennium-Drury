@@ -82,7 +82,7 @@ horizontal_alignment = 1
 layout_mode = 0
 offset_left = 770.0
 offset_top = 82.0
-offset_right = 950.0
+offset_right = 953.0
 offset_bottom = 452.0
 allow_search = false
 
@@ -120,25 +120,20 @@ offset_bottom = 361.0
 
 [node name="From" type="Label" parent="Email/VBoxContainer"]
 layout_mode = 2
-text = "From"
 
 [node name="Email" type="Label" parent="Email/VBoxContainer"]
 layout_mode = 2
-text = "Email: "
 
 [node name="Subject" type="Label" parent="Email/VBoxContainer"]
 layout_mode = 2
-text = "Subject"
 
 [node name="Text" type="RichTextLabel" parent="Email/VBoxContainer"]
 layout_mode = 2
-text = "Text"
 fit_content = true
 scroll_active = false
 
 [node name="Links" type="RichTextLabel" parent="Email/VBoxContainer"]
 layout_mode = 2
-text = "Text"
 fit_content = true
 scroll_active = false
 
