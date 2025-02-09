@@ -172,6 +172,10 @@ offset_right = 332.0
 offset_bottom = 25.0
 script = ExtResource("2_r786b")
 
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="Panel/Header/Button3"]
+position = Vector2(-5, -607)
+stream = ExtResource("2_hh8km")
+
 [node name="Label3" type="Label" parent="Panel/Header"]
 layout_mode = 0
 offset_left = 310.0
