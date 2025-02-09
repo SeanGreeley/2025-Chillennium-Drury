@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Chillenium 2025 Game"
+run/main_scene="res://scenes/GameTitle.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/image="res://assets/DIGS_DESIGN_3_1.png"
 config/icon="res://assets/icon.svg"
