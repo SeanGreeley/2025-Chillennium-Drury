@@ -107,7 +107,7 @@ text = "Hey you over there"
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
-offset_top = 605.0
+offset_top = 602.0
 offset_right = 1155.0
 offset_bottom = 650.0
 
@@ -115,7 +115,7 @@ offset_bottom = 650.0
 offset_left = 5.0
 offset_top = 5.0
 offset_right = 65.0
-offset_bottom = 40.0
+offset_bottom = 43.0
 text = "Start"
 script = ExtResource("2_fd0te")
 
@@ -124,7 +124,7 @@ layout_mode = 0
 offset_left = 66.0
 offset_top = 5.0
 offset_right = 199.0
-offset_bottom = 40.0
+offset_bottom = 43.0
 toggle_mode = true
 button_pressed = true
 text = "Main Menu"
@@ -136,7 +136,7 @@ layout_mode = 0
 offset_left = 200.0
 offset_top = 5.0
 offset_right = 275.0
-offset_bottom = 40.0
+offset_bottom = 43.0
 toggle_mode = true
 text = "Email"
 script = ExtResource("2_fd0te")
