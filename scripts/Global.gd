@@ -44,8 +44,7 @@ var incorrectEmails = 0
 var gottenemails = 0
 
 func getGrade() -> String:
-	var totalEmails = correctEmails + incorrectEmails
-	var grade = correctEmails / max(totalEmails, 1)
+	var grade = correctEmails / max(gottenemails, 1)
 	if grade > .8:
 		return 'A'
 	elif grade > .6:
