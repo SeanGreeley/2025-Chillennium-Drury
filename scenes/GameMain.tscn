@@ -69,7 +69,6 @@ offset_left = 844.0
 offset_top = -1.0
 offset_right = 868.0
 offset_bottom = 25.0
-script = ExtResource("2_pnp5l")
 
 [node name="Label3" type="Label" parent="Email/ColorRect"]
 layout_mode = 0
@@ -211,6 +210,7 @@ horizontal_alignment = 2
 
 [node name="Warning" type="Panel" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 400.0
 offset_top = 150.0
 offset_right = 750.0
@@ -277,4 +277,5 @@ offset_bottom = 23.0
 text = "X"
 horizontal_alignment = 1
 
+[connection signal="pressed" from="Email/ColorRect/Button3" to="Warning" method="_on_button_pressed"]
 [connection signal="pressed" from="Panel3/Button" to="Warning" method="_on_button_pressed"]
