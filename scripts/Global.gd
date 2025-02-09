@@ -34,6 +34,10 @@ var emails = {
 	"*No Subject Provided*":{"from":"Dark Krow","email":"darkKrow17@fmail.com","text":"Hey, we played together yesterday. Give me your account info and I'll gift you $$$","links":"","value":-1,"anger":"Please do not get us involved in pathetic catfishing attempts."},
 	"Lawn Mowing":{"from":"Fred Green","email":"fgreen98@fmail.com","text":"Do you need your yard mowed? Call 555-555-5555 and we can sign you up to get your lawn mowed every two weeks for the cheap price of $25 a month.","links":"Or Sign Up Here (www.letsgogreen.org)","value":-1,"anger":"Silly secretary, we haven't had grass around our establishment for 15 years. Too much gunk in the water."},
 	"Account Creation Successful":{"from":"Bosder Customer Support","email":"customersupport-noreply@bosder.com","text":"Hello Stephen Careers! Your account for Bosder, the sophisticated dating site for only the best of bosses, has been successfully created with the email “scareers@digs.org”. We can’t wait to see you out and leading in both your career, and your love life!","links":"","value":-1,"anger":"Hey now! That is my private information that you’re reading there! At the very least, don’t let me know you’ve seen it."},
+	"Void":{"from":"","email":"","text":"","links":"","value":0,"anger":"???"},
 	#"Subject":{"from":"","email":"","text":"","links":"","value":-1,"anger":""},
 }
 var emailSize = emails.size()
+var currentSubject = "Void"
+var correctEmails = 0
+var incorrectEmails = 0
