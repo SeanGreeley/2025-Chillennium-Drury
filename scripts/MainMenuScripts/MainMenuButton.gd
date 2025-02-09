@@ -6,6 +6,7 @@ extends Button
 func _process(_delta: float) -> void:
 	if button_pressed == false:
 		menu.hide()
+		$ClickSound.play()
 		menu.visible = false
 	else:
 		menu.show()

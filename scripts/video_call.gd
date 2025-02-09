@@ -9,7 +9,7 @@ func _ready():
 	rawRatio = 0
 	speechText = Global.emails[Global.currentSubject]["anger"]
 	$Speech.text = speechText
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	visible = true
 	$Stephen.play("loading")
 	$CallSound.play()

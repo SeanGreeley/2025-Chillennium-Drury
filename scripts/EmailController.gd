@@ -1,6 +1,6 @@
 extends Control
 var mail = Global.emails
-var mailSize = Global.emailSize - 1
+var mailSize = Global.emailSize - 2
 var gottenMail = []
 @export var thing: Label;
 var employees = {
@@ -35,6 +35,7 @@ func delete_by_subject(deleteSubject:String):
 		for i in $ItemList.item_count:
 			if str($ItemList.get_item_text(i)) == deleteSubject:
 				$ItemList.remove_item(i)
+				break
 		Global.currentSubject = "Void"
 		$VBoxContainer/From.text = ""
 		$VBoxContainer/Email.text = ""
@@ -52,7 +53,7 @@ func _on_timer_timeout() -> void:
 	if (thing.currTime != 4 or thing.currTime != 5):
 		var random_key = (randi() % mailSize + 1)
 		var randEmail = randi() % 12
-		if (randEmail < 4):
+		if (randEmail < 3):
 			while random_key in gottenMail:
 				if gottenMail.size() >= mailSize:
 					return
@@ -60,4 +61,5 @@ func _on_timer_timeout() -> void:
 			gottenMail.append(random_key)
 			Global.gottenemails = gottenMail.size()
 			$ItemList.add_item(mail.keys()[random_key])
+			$NotifSound.play()
 		
