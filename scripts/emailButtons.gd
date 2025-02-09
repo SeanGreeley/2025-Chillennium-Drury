@@ -11,7 +11,6 @@ func _pressed():
 		if (text == "Delete" and Global.emails[Global.currentSubject]["value"] == 1) or (text != "Delete" and Global.emails[Global.currentSubject]["value"] == -1):
 			Global.incorrectEmails+=1
 			var newCall = callScene.instantiate()
-			await get_tree().create_timer(3.0).timeout
 			get_tree().root.add_child(newCall)
 		else:
 			Global.correctEmails+=1
