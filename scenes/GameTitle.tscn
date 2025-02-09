@@ -1,11 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://cspmxdwitqv8c"]
+[gd_scene load_steps=9 format=3 uid="uid://cspmxdwitqv8c"]
 
 [ext_resource type="Theme" uid="uid://0cvsh5dbnr77" path="res://Theme/MainTheme.tres" id="1_j4beu"]
 [ext_resource type="Script" path="res://scripts/MainMenuScripts/start_button.gd" id="2_fd0te"]
 [ext_resource type="Script" path="res://scripts/MainMenuScripts/quit_button.gd" id="3_73vjh"]
 [ext_resource type="Texture2D" uid="uid://cpxmajrl71xcx" path="res://assets/folder.png" id="4_1snma"]
 [ext_resource type="Script" path="res://scripts/MainMenuScripts/MainMenuButton.gd" id="4_3kcin"]
+[ext_resource type="Texture2D" uid="uid://dx4sd3ld6t3ea" path="res://assets/listContainer.jpg" id="6_hgqyv"]
 [ext_resource type="Texture2D" uid="uid://dlneha07c4dfh" path="res://assets/Computer.png" id="6_iosja"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lv556"]
+texture = ExtResource("6_hgqyv")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.752941, 0.752941, 0.752941, 1)
 
 [node name="GameOpening" type="Control"]
 layout_mode = 3
@@ -113,6 +122,7 @@ offset_right = 1155.0
 offset_bottom = 650.0
 
 [node name="StartButton" type="Button" parent="Panel2"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
 offset_right = 65.0
@@ -141,6 +151,15 @@ offset_bottom = 43.0
 toggle_mode = true
 text = "Email"
 script = ExtResource("2_fd0te")
+
+[node name="Label" type="Label" parent="Panel2"]
+offset_left = 1064.0
+offset_top = 6.0
+offset_right = 1148.0
+offset_bottom = 41.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_lv556")
+text = "9:00 AM"
+horizontal_alignment = 2
 
 [node name="Computer" type="Sprite2D" parent="."]
 position = Vector2(55, 54.5)
