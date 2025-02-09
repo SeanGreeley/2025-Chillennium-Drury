@@ -1,11 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsqqb4tkiqan3"]
+[gd_scene load_steps=11 format=3 uid="uid://dsqqb4tkiqan3"]
 
 [ext_resource type="Script" path="res://scripts/video_call.gd" id="1_reepk"]
 [ext_resource type="Texture2D" uid="uid://br0caxa5ave8" path="res://assets/stephenCareers/mouthClosed.png" id="2_umbbc"]
+[ext_resource type="Texture2D" uid="uid://cgj8t6api1o3" path="res://assets/stephenCareers/load1.png" id="2_v0wcv"]
 [ext_resource type="Texture2D" uid="uid://5nvepjesebhk" path="res://assets/stephenCareers/mouthOpen.png" id="3_j7fco"]
+[ext_resource type="Texture2D" uid="uid://bnskig2bqvg4k" path="res://assets/stephenCareers/load2.png" id="3_ukw2p"]
+[ext_resource type="Texture2D" uid="uid://r5ptu1bh1uup" path="res://assets/stephenCareers/load3.png" id="4_a5auy"]
+[ext_resource type="Texture2D" uid="uid://ch0cwtmlm7emd" path="res://assets/stephenCareers/load4.png" id="5_pybsp"]
+[ext_resource type="AudioStream" uid="uid://dk4lhx7muss5b" path="res://assets/sfx/call.mp3" id="8_quyet"]
+[ext_resource type="AudioStream" uid="uid://c2x02m10ci6aa" path="res://assets/sfx/yapping.mp3" id="9_jwy6x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1rrmg"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v0wcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ukw2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a5auy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pybsp")
+}],
+"loop": true,
+"name": &"loading",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_umbbc")
@@ -14,7 +37,7 @@ animations = [{
 "texture": ExtResource("3_j7fco")
 }],
 "loop": true,
-"name": &"default",
+"name": &"talking",
 "speed": 5.0
 }]
 
@@ -65,7 +88,7 @@ horizontal_alignment = 1
 position = Vector2(576, 256)
 scale = Vector2(6.11458, 6.11458)
 sprite_frames = SubResource("SpriteFrames_1rrmg")
-frame_progress = 0.224209
+animation = &"loading"
 
 [node name="Speech" type="Label" parent="."]
 layout_mode = 0
@@ -78,3 +101,11 @@ text = "HEY BUB! YOU DID SOMETHING I DIDN'T LIKE! I AM ACTUALLY GOING TO KILL YO
 autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
+
+[node name="CallSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(380, 405)
+stream = ExtResource("8_quyet")
+
+[node name="TalkSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(380, 405)
+stream = ExtResource("9_jwy6x")
