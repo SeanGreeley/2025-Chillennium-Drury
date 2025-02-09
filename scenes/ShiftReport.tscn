@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dumjo2ojtljea"]
+[gd_scene load_steps=8 format=3 uid="uid://byki26anmgyvw"]
 
 [ext_resource type="Script" path="res://scripts/MainMenuScripts/start_button.gd" id="1_prye8"]
+[ext_resource type="AudioStream" uid="uid://10d7vsrnpxf0" path="res://assets/sfx/click.mp3" id="2_hh8km"]
 [ext_resource type="Script" path="res://scripts/ToMainMenu.gd" id="2_r786b"]
 [ext_resource type="Texture2D" uid="uid://dx4sd3ld6t3ea" path="res://assets/listContainer.jpg" id="3_fpe3o"]
 [ext_resource type="Texture2D" uid="uid://dlneha07c4dfh" path="res://assets/Computer.png" id="4_2swmw"]
@@ -23,11 +24,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BackGround" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1155.0
 offset_bottom = 650.0
 color = Color(0, 0.490196, 0.47451, 1)
 
 [node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
 offset_top = 602.0
 offset_right = 1155.0
 offset_bottom = 650.0
@@ -41,6 +44,10 @@ offset_bottom = 43.0
 text = "Start"
 script = ExtResource("1_prye8")
 
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="Panel2/StartButton"]
+position = Vector2(-5, -607)
+stream = ExtResource("2_hh8km")
+
 [node name="Button" type="Button" parent="Panel2"]
 layout_mode = 0
 offset_left = 66.0
@@ -51,6 +58,10 @@ toggle_mode = true
 text = "Main Menu"
 script = ExtResource("2_r786b")
 
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="Panel2/Button"]
+position = Vector2(-5, -607)
+stream = ExtResource("2_hh8km")
+
 [node name="Button2" type="Button" parent="Panel2"]
 layout_mode = 0
 offset_left = 200.0
@@ -60,6 +71,10 @@ offset_bottom = 43.0
 toggle_mode = true
 text = "Email"
 script = ExtResource("1_prye8")
+
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="Panel2/Button2"]
+position = Vector2(-5, -607)
+stream = ExtResource("2_hh8km")
 
 [node name="Label" type="Label" parent="Panel2"]
 layout_mode = 0
@@ -85,6 +100,7 @@ text = "My Computer"
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="." node_paths=PackedStringArray("Received", "Stoped", "LetPass", "Grade")]
+layout_mode = 0
 offset_left = 400.0
 offset_top = 150.0
 offset_right = 750.0
