@@ -41,6 +41,7 @@ var emailSize = emails.size()
 var currentSubject = "Void"
 var correctEmails = 0
 var incorrectEmails = 0
+var gottenemails = 0
 
 func getGrade() -> String:
 	var totalEmails = correctEmails + incorrectEmails

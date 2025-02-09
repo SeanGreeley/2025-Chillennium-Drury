@@ -58,5 +58,6 @@ func _on_timer_timeout() -> void:
 					return
 				random_key = (randi() % mailSize + 1)
 			gottenMail.append(random_key)
+			Global.gottenemails = gottenMail.size()
 			$ItemList.add_item(mail.keys()[random_key])
 		

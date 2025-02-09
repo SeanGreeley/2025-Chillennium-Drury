@@ -133,8 +133,8 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rmlvw")
 layout_mode = 0
 offset_left = 281.0
 offset_top = 52.0
-offset_right = 772.0
-offset_bottom = 361.0
+offset_right = 748.0
+offset_bottom = 389.0
 
 [node name="From" type="Label" parent="Email/VBoxContainer"]
 layout_mode = 2
