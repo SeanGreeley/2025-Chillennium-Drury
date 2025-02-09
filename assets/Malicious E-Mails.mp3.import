@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://244oc1pv35if"
+path="res://.godot/imported/Malicious E-Mails.mp3-2e8bfdb6140f1a967f1b56a9deecc2bb.mp3str"
+
+[deps]
+
+source_file="res://assets/Malicious E-Mails.mp3"
+dest_files=["res://.godot/imported/Malicious E-Mails.mp3-2e8bfdb6140f1a967f1b56a9deecc2bb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
