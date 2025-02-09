@@ -54,6 +54,7 @@ offset_right = 781.0
 offset_bottom = 559.0
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
+layout_mode = 0
 offset_left = 10.0
 offset_top = 8.0
 offset_right = 401.0
