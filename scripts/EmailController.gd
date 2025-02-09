@@ -24,6 +24,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func _openMail(index, _vector2, _mouse_index):
+	$ClickSound.play()
 	var clickIndex = str($ItemList.get_item_text(index))
 	Global.currentSubject = clickIndex
 	var clickedMail = mail[clickIndex]
