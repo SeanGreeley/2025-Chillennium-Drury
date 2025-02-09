@@ -153,6 +153,7 @@ text = "Email"
 script = ExtResource("2_fd0te")
 
 [node name="Label" type="Label" parent="Panel2"]
+layout_mode = 0
 offset_left = 1064.0
 offset_top = 6.0
 offset_right = 1148.0

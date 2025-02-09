@@ -13,3 +13,6 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	visible = true
+
+func _on_button_pressed_inside() -> void:
+	visible = false

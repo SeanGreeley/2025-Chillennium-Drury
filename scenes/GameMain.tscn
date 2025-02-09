@@ -279,3 +279,5 @@ horizontal_alignment = 1
 
 [connection signal="pressed" from="Email/ColorRect/Button3" to="Warning" method="_on_button_pressed"]
 [connection signal="pressed" from="Panel3/Button" to="Warning" method="_on_button_pressed"]
+[connection signal="pressed" from="Warning/QuitButton" to="Warning" method="_on_button_pressed_inside"]
+[connection signal="pressed" from="Warning/ColorRect/Button3" to="Warning" method="_on_button_pressed_inside"]
