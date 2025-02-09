@@ -41,3 +41,17 @@ var emailSize = emails.size()
 var currentSubject = "Void"
 var correctEmails = 0
 var incorrectEmails = 0
+
+func getGrade() -> String:
+	var totalEmails = correctEmails + incorrectEmails
+	var grade = correctEmails / max(totalEmails, 1)
+	if grade > .8:
+		return 'A'
+	elif grade > .6:
+		return 'B'
+	elif grade > .4:
+		return 'C'
+	elif grade > .2:
+		return 'D'
+	else:
+		return 'F'
