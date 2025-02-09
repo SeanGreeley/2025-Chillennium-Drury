@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		timer = timerReset
 		if labelNext == 0:
 			labelNext += 1
-			Received.text = Received.text + ' ' + str((Global.correctEmails + Global.incorrectEmails))
+			Received.text = Received.text + ' ' + str((Global.gottenemails))
 		elif labelNext == 1:
 			labelNext += 1
 			Stoped.text = Stoped.text + ' ' + str(Global.correctEmails)
