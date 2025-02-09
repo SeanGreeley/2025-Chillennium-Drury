@@ -48,8 +48,8 @@ script = ExtResource("2_pnp5l")
 
 [node name="Label3" type="Label" parent="Email/ColorRect"]
 layout_mode = 0
-offset_left = 755.0
-offset_right = 775.0
+offset_left = 757.0
+offset_right = 777.0
 offset_bottom = 23.0
 text = "X"
 horizontal_alignment = 1
