@@ -1,10 +1,13 @@
 extends Control
 
 var rawRatio = 0.0
+var speechText = ""
 
 func _ready():
 	$Speech.visible_ratio = 0
 	rawRatio = 0
+	speechText = Global.emails[Global.currentSubject]["anger"]
+	$Speech.text = speechText
 	$Stephen.play("loading")
 	$CallSound.play()
 	await get_tree().create_timer(3.0).timeout
@@ -17,5 +20,5 @@ func _process(delta):
 		$Speech.visible_ratio = floor(rawRatio*50)/50
 	elif $Speech.visible_ratio >= 1:
 		$TalkSound.stop()
-		await get_tree().create_timer(1.0).timeout
+		await get_tree().create_timer(2.0).timeout
 		queue_free()
