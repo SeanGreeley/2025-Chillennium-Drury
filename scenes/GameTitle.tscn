@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cspmxdwitqv8c"]
+[gd_scene load_steps=7 format=3 uid="uid://cspmxdwitqv8c"]
 
 [ext_resource type="Theme" uid="uid://0cvsh5dbnr77" path="res://Theme/MainTheme.tres" id="1_j4beu"]
 [ext_resource type="Script" path="res://scripts/MainMenuScripts/start_button.gd" id="2_fd0te"]
 [ext_resource type="Script" path="res://scripts/MainMenuScripts/quit_button.gd" id="3_73vjh"]
 [ext_resource type="Texture2D" uid="uid://cpxmajrl71xcx" path="res://assets/folder.png" id="4_1snma"]
 [ext_resource type="Script" path="res://scripts/MainMenuScripts/MainMenuButton.gd" id="4_3kcin"]
+[ext_resource type="Texture2D" uid="uid://dlneha07c4dfh" path="res://assets/Computer.png" id="6_iosja"]
 
 [node name="GameOpening" type="Control"]
 layout_mode = 3
@@ -140,3 +141,15 @@ offset_bottom = 43.0
 toggle_mode = true
 text = "Email"
 script = ExtResource("2_fd0te")
+
+[node name="Computer" type="Sprite2D" parent="."]
+position = Vector2(55, 54.5)
+scale = Vector2(0.82, 0.93)
+texture = ExtResource("6_iosja")
+
+[node name="Label" type="Label" parent="Computer"]
+offset_left = -60.9756
+offset_top = 56.4516
+offset_right = 55.0244
+offset_bottom = 79.4516
+text = "My Computer"
